@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Palindrome {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String str=sc.next();
+        
+        
+        StringBuffer sb = new StringBuffer(str);
+        sb.reverse();
+        String str1 = sb.toString();
+        if(str.equals(str1)){
+            System.out.print("Yes");
+        }
+        else{
+            System.out.print("No");
+        }
+        
+    }
+}
+
+
+
