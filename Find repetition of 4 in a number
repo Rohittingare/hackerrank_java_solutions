@@ -1,0 +1,37 @@
+//This Program used to find the repetetion of any number in a number string
+// 45634 it contains 2 repetetion of digit 4
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();
+		int[] num = new int[T];
+		for(int i = 0; i<T; i++){
+		    num[i] = sc.nextInt();
+		}
+			int count = 0;
+		 for(int i = 0; i<T; i++){
+		     while(num[i]/10>0){
+		         if(num[i]%10==4){
+		             count++;
+		         }
+		         num[i]=num[i]/10;
+		     }
+		     if(num[i]%10==4){
+		         count++;
+		     }
+		     
+		     System.out.println(count);
+		     count=0;
+		 }  
+		
+		
+	}
+}
